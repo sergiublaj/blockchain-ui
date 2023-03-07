@@ -1,0 +1,16 @@
+<div class="card shadow-sm my-3">
+  <div class="card-body">
+    <h4 class="card-title">Auction</h4>
+  </div>
+
+  auctions
+  {{auctions | json}}
+
+  <div class="card-text w-50 ms-3 mb-3">
+    <app-auction-register [(auctions)]="auctions"></app-auction-register>
+    <hr class="hr"/>
+    <app-auction-data [auctions]="auctions"></app-auction-data>
+    <hr class="hr"/>
+    <app-auction-bid [auctions]="auctions"></app-auction-bid>
+  </div>
+</div>

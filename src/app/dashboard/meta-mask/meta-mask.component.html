@@ -1,0 +1,16 @@
+<div class="card shadow-sm mt-2">
+  <div class="card-body">
+    <h4 class="card-title">MetaMask</h4>
+
+    <div class="card-text">
+      <p>Here you can test your connection to MetaMask</p>
+      <ng-container *ngIf="canConnect; else showError">
+        <button type="button" class="btn btn-primary" (click)="getMetaMaskAccount()">TEST</button>
+        <div *ngIf="accountsLoaded">Your account: {{accounts[0]}}
+        </div>
+      </ng-container>
+
+      <ng-template #showError>{{error}}</ng-template>
+    </div>
+  </div>
+</div>
